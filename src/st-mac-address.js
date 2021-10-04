@@ -14,6 +14,6 @@ import { NotImplementedError } from '../extensions/index.js';
  * For 00-1B-63-84-45-E6, the output should be true.
  *
  */
-export default function isMAC48Address(/* n */) {
-
+export default function isMAC48Address(num) {
+  return num.split('-').every(number => !isNaN(parseInt(number, 16)));
 }
