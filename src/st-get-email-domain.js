@@ -10,6 +10,8 @@ import { NotImplementedError } from '../extensions/index.js';
  * For the input 'prettyandsimple@example.com', the output should be 'example.com'
  *
  */
-export default function getEmailDomain(/* email */) {
-
+export default function getEmailDomain(email) {
+  let foundPos = email.lastIndexOf('@');
+  let result = email.slice(foundPos+1);
+  return result;
 }
