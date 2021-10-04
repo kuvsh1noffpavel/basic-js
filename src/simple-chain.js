@@ -7,9 +7,6 @@ import { NotImplementedError } from '../extensions/index.js';
 
 
 export default {
-
-/*
-
   memoryChain : [],
   getLength() {
     return this.memoryChain.length;
@@ -24,7 +21,7 @@ export default {
   removeLink(position) {
     if (typeof position !== 'number' || (position^0) !== position || position < 0 || position > this.getLength()){
       this.memoryChain.splice(0);
-      throw new Error ('Check the chain position');
+      throw new Error ("You can't remove incorrect link!");
     }
     let removePosition = position - 1;
     this.memoryChain.splice(removePosition, 1);
@@ -39,7 +36,5 @@ export default {
     this.memoryChain.splice(0);
     return finalChain;
   }
-
-*/
 
 };
